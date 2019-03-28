@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: dictionary-server
 spec:
-  replicas: 3
+  replicas: 4
   template:
     metadata:
       labels:
@@ -11,12 +11,12 @@ spec:
     spec:
       containers:
       - name: server
-        image: brendanburns/dictionary-server
+        image: dmlaziuk/dictionary-server:v0.3
         ports:
         - containerPort: 8080
         readinessProbe:
           httpGet:
-            path: /ready
+            path: /readyz
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 5

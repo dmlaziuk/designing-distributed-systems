@@ -13,7 +13,7 @@ spec:
       - name: cache
         resources:
           requests:
-            memory: 2Gi
+            memory: 1Gi
         image: brendanburns/varnish
         command:
         - varnishd
@@ -24,7 +24,7 @@ spec:
         - 0.0.0.0:8080
         - -s
         # This should match the 'memory' request above.
-        - malloc,2G
+        - malloc,1G
         ports:
         - containerPort: 8080
         volumeMounts:

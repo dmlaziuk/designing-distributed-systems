@@ -23,7 +23,7 @@ spec:
       - name: conf
         configMap:
           # This is the ConfigMap for nginx we created previously
-          name: nginx-conf
+          name: nginx-config
       - name: certs
         secret:
           # This is the secret we created above
