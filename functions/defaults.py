@@ -1,5 +1,5 @@
 # Simple handler function for adding default values
-def handler(context):
+def handler(event, context):
   # Get the input value
   obj = context.json
   # If the 'name' field is not present, set it randomly

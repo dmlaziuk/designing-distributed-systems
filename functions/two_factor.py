@@ -3,11 +3,11 @@ import twillio
 def two_factor(context):
   # Generate a random six digit code
   code = random.randint(100000, 999999)
-  
+
   # Register the code with the login service
   user = context.json["user"]
   register_code_with_login_service(user, code)
-  
+
   # Use the twillio library to send texts
   account = "my-account-sid"
   token = "my-token"
